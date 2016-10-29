@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<style>
+		.form{
+			text-align:center;
+			padding-top:200px;
+		}
+
+	</style>
+</head>
+<body>
+
+<div class="form" ng-app="myApp" ng-controller="formCtrl">
+  <form>
+    User Name: <input type="text" ng-model="username"><br><br>
+    Password: <input type="password" ng-model="password"><br><br>
+    <input type="button" value="submit" ng-model="submit">
+  </form>
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('formCtrl', function($scope) {
+    $scope.username = "John";
+    $scope.password = "John";
+   
+});
+</script>
+
+</body>
+</html>
